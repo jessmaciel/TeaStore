@@ -17,7 +17,7 @@ spec:
         - name: teastore-db
           image: descartesresearch/teastore-db
           ports:
-        - containerPort: 3306
+            - containerPort: 3306
         resources:
           requests:
             memory: "1Gi"
