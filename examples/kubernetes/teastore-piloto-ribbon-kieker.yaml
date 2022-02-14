@@ -56,15 +56,6 @@ spec:
           env:
             - name: USE_POD_IP
               value: "true"
-            resources:
-              requests:
-                memory: "1Gi"
-                cpu: "210m"
-              limits:
-                cpu: "420m"
-                memory: "3Gi"
-          nodeSelector:
-            nodetype: worker-app
 ---
 apiVersion: v1
 kind: Service
@@ -111,15 +102,6 @@ spec:
               value: "3306"
             - name: RABBITMQ_HOST
               value: "teastore-kieker-rabbitmq"
-            resources:
-              requests:
-                memory: "1Gi"
-                cpu: "500m"
-              limits:
-                cpu: "1000m"
-                memory: "3Gi"
-          nodeSelector:
-            nodetype: worker-app
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -148,15 +130,6 @@ spec:
               value: "teastore-registry"
             - name: RABBITMQ_HOST
               value: "teastore-kieker-rabbitmq"
-            resources:
-              requests:
-                memory: "1Gi"
-                cpu: "400m"
-              limits:
-                cpu: "800m"
-                memory: "3Gi"
-          nodeSelector:
-            nodetype: worker-app
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -185,15 +158,6 @@ spec:
               value: "teastore-registry"
             - name: RABBITMQ_HOST
               value: "teastore-kieker-rabbitmq"
-            resources:
-              requests:
-                memory: "1Gi"
-                cpu: "400m"
-              limits:
-                cpu: "800m"
-                memory: "3Gi"
-          nodeSelector:
-            nodetype: worker-app
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -222,15 +186,6 @@ spec:
               value: "teastore-registry"
             - name: RABBITMQ_HOST
               value: "teastore-kieker-rabbitmq"
-            resources:
-              requests:
-                memory: "1Gi"
-                cpu: "210m"
-              limits:
-                cpu: "420m"
-                memory: "3Gi"
-          nodeSelector:
-            nodetype: worker-app
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -259,15 +214,6 @@ spec:
               value: "teastore-registry"
             - name: RABBITMQ_HOST
               value: "teastore-kieker-rabbitmq"
-            resources:
-              requests:
-                memory: "1Gi"
-                cpu: "750m"
-              limits:
-                cpu: "1500m"
-                memory: "3Gi"
-          nodeSelector:
-            nodetype: worker-app
 ---
 apiVersion: v1
 kind: Service
