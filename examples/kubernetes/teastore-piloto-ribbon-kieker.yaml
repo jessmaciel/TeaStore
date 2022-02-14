@@ -14,19 +14,19 @@ spec:
         run: teastore-db
     spec:
       containers:
-        - name: teastore-db
-          image: descartesresearch/teastore-db
-          ports:
-            - containerPort: 3306
-          resources:
-            requests:
-              memory: "1Gi"
-              cpu: "210m"
-            limits:
-              cpu: "420m"
-              memory: "3Gi"
-        nodeSelector:
-          nodetype: worker-app
+      - name: teastore-db
+        image: descartesresearch/teastore-db
+        ports:
+        - containerPort: 3306
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "210m"
+          limits:
+            cpu: "420m"
+            memory: "3Gi"
+      nodeSelector:
+        nodetype: worker-app
 ---
 apiVersion: v1
 kind: Service
