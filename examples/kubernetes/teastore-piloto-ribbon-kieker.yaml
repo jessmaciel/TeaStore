@@ -14,12 +14,10 @@ spec:
         run: teastore-db
     spec:
       containers:
-      - name: teastore-db
-        image: descartesresearch/teastore-db
-        ports:
-        - containerPort: 3306
-      nodeSelector:
-        nodetype: worker-app
+        - name: teastore-db
+          image: descartesresearch/teastore-db
+          ports:
+            - containerPort: 3306
 ---
 apiVersion: v1
 kind: Service
