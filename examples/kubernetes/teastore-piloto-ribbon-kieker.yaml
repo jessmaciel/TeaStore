@@ -13,8 +13,6 @@ spec:
         app: teastore
         run: teastore-db
     spec:
-      nodeSelector:
-        nodetype: worker-app
       containers:
         - name: teastore-db
           image: descartesresearch/teastore-db
@@ -27,6 +25,8 @@ spec:
             limits:
               cpu: "420m"
               memory: "3Gi"
+        nodeSelector:
+          nodetype: worker-app
 ---
 apiVersion: v1
 kind: Service
