@@ -18,6 +18,10 @@ spec:
           image: descartesresearch/teastore-db
           ports:
             - containerPort: 3306
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "210m"
       nodeSelector:
         nodetype: worker-app
 ---
