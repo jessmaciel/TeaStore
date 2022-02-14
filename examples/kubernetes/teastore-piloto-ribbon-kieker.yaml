@@ -22,6 +22,9 @@ spec:
             requests:
               memory: "1Gi"
               cpu: "210m"
+            limits:
+              cpu: "420m"
+              memory: "3Gi"
       nodeSelector:
         nodetype: worker-app
 ---
