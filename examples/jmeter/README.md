@@ -4,7 +4,7 @@ Description of each JMeter file
 
 1. Default TeaStore browser profile to use without gui: [teastore_browse_nogui](/examples/jmeter/teastore_browse_nogui.jmx) 
 2. Default TeaStore browser profile: [teastore_browse_nogui](/examples/jmeter/teastore_browse.jmx)
-3. Profile with Constant Throughput Timer plugin to determine the maximum throughput per minute (base 6000.0): [teastore_browse_nogui](/examples/jmeter/teastore_browse_limited_tp.jmx)
+3. Profile with Constant Throughput Timer plugin to determine the maximum throughput per minute (base 6000.0): [teastore_browse_limited_tp](/examples/jmeter/teastore_browse_limited_tp.jmx)
 
 
 
