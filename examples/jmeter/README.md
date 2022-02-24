@@ -5,7 +5,10 @@ Description of each JMeter file
 1. Default TeaStore browser profile to use without gui: [teastore_browse_nogui](/examples/jmeter/teastore_browse_nogui.jmx) 
 2. Default TeaStore browser profile: [teastore_browse_nogui](/examples/jmeter/teastore_browse.jmx)
 3. Profile with Constant Throughput Timer plugin to determine the maximum throughput per minute (base 6000.0): [teastore_browse_limited_tp](/examples/jmeter/teastore_browse_limited_tp.jmx)
-
+4. ABC
+5. Profile to exploit RAM vulnerability: [teastore_attackram_login](/examples/jmeter/teastore_attackram_login.jmx)
+6. Profile to exploit CPU vulnerability: [teastore_attackcpu_login](/examples/jmeter/teastore_attackcpu_login.jmx)
+7. Only /loginAction requests: [teastore_dobem_login](/examples/jmeter/teastore_dobem_login.jmx)
 
 
 
