@@ -33,22 +33,19 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
-      <kg.apc.jmeter.threads.SteppingThreadGroup guiclass="kg.apc.jmeter.threads.SteppingThreadGroupGui" testclass="kg.apc.jmeter.threads.SteppingThreadGroup" testname="jp@gc - Stepping Thread Group" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread-Gruppe" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <stringProp name="ThreadGroup.num_threads">500</stringProp>
-        <stringProp name="Threads initial delay">0</stringProp>
-        <stringProp name="Start users count">50</stringProp>
-        <stringProp name="Start users count burst">50</stringProp>
-        <stringProp name="Start users period">120</stringProp>
-        <stringProp name="Stop users count">50</stringProp>
-        <stringProp name="Stop users period">120</stringProp>
-        <stringProp name="flighttime">450</stringProp>
-        <stringProp name="rampUp">10</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Schleifen-Controller (Loop Controller)" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-      </kg.apc.jmeter.threads.SteppingThreadGroup>
+        <stringProp name="ThreadGroup.num_threads">${num_user}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${ramp_up}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">2700</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
       <hashTree>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
@@ -381,35 +378,14 @@
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
         </HTTPSamplerProxy>
         <hashTree/>
-        <kg.apc.jmeter.timers.VariableThroughputTimer guiclass="kg.apc.jmeter.timers.VariableThroughputTimerGui" testclass="kg.apc.jmeter.timers.VariableThroughputTimer" testname="jp@gc - Throughput Shaping Timer" enabled="true">
-          <collectionProp name="load_profile">
-            <collectionProp name="1572428745">
-              <stringProp name="1567">10</stringProp>
-              <stringProp name="1691">50</stringProp>
-              <stringProp name="53430">600</stringProp>
-            </collectionProp>
-            <collectionProp name="1132466611">
-              <stringProp name="1691">50</stringProp>
-              <stringProp name="49741">250</stringProp>
-              <stringProp name="52624">550</stringProp>
-            </collectionProp>
-            <collectionProp name="-775866494">
-              <stringProp name="49741">250</stringProp>
-              <stringProp name="49741">250</stringProp>
-              <stringProp name="48625">100</stringProp>
-            </collectionProp>
-            <collectionProp name="-271993781">
-              <stringProp name="49741">250</stringProp>
-              <stringProp name="1691">50</stringProp>
-              <stringProp name="52624">550</stringProp>
-            </collectionProp>
-            <collectionProp name="1605333024">
-              <stringProp name="1691">50</stringProp>
-              <stringProp name="1567">10</stringProp>
-              <stringProp name="50547">300</stringProp>
-            </collectionProp>
-          </collectionProp>
-        </kg.apc.jmeter.timers.VariableThroughputTimer>
+        <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer" enabled="true">
+          <intProp name="calcMode">2</intProp>
+          <doubleProp>
+            <name>throughput</name>
+            <value>6000.0</value>
+            <savedValue>0.0</savedValue>
+          </doubleProp>
+        </ConstantThroughputTimer>
         <hashTree/>
       </hashTree>
     </hashTree>
