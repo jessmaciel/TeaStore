@@ -21,9 +21,9 @@ spec:
         resources:
             requests:
               memory: "1Gi"
-              cpu: "210m"
+              cpu: "50m"
             limits:
-              cpu: "420m"
+              cpu: "100m"
               memory: "3Gi"
       nodeSelector:
         nodetype: worker-app
@@ -68,9 +68,9 @@ spec:
         resources:
             requests:
               memory: "1Gi"
-              cpu: "210m"
+              cpu: "50m"
             limits:
-              cpu: "420m"
+              cpu: "100m"
               memory: "3Gi"
       nodeSelector:
         nodetype: worker-app
@@ -121,9 +121,9 @@ spec:
         resources:
             requests:
               memory: "1Gi"
-              cpu: "500m"
+              cpu: "200m"
             limits:
-              cpu: "1000m"
+              cpu: "400m"
               memory: "3Gi"
       nodeSelector:
         nodetype: worker-app
@@ -156,9 +156,9 @@ spec:
         resources:
             requests:
               memory: "1Gi"
-              cpu: "400m"
+              cpu: "130m"
             limits:
-              cpu: "800m"
+              cpu: "260m"
               memory: "3Gi"
       nodeSelector:
         nodetype: worker-app
@@ -191,9 +191,9 @@ spec:
         resources:
             requests:
               memory: "1Gi"
-              cpu: "400m"
+              cpu: "130m"
             limits:
-              cpu: "800m"
+              cpu: "260m"
               memory: "3Gi"
       nodeSelector:
         nodetype: worker-app
@@ -226,9 +226,9 @@ spec:
         resources:
             requests:
               memory: "1Gi"
-              cpu: "210m"
+              cpu: "70m"
             limits:
-              cpu: "420m"
+              cpu: "500m"
               memory: "3Gi"
       nodeSelector:
         nodetype: worker-app
@@ -261,9 +261,9 @@ spec:
         resources:
             requests:
               memory: "1Gi"
-              cpu: "750m"
+              cpu: "250m"
             limits:
-              cpu: "1500m"
+              cpu: "500m"
               memory: "3Gi"
       nodeSelector:
         nodetype: worker-app
